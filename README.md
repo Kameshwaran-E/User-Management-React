@@ -9,7 +9,7 @@
 
 ## Preview
 
-- [https://50Fin.ahampriyanshu.com/](https://50Fin.ahampriyanshu.com/)
+- https://kameshwaran-fin-task.netlify.app
 
 ## Setup
 
