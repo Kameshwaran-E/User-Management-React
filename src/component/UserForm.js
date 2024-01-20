@@ -1,57 +1,75 @@
 // UserForm.js
 import React, { useState } from 'react';
-
 import './UserForm.css';
+import { delay, motion } from 'framer-motion';
 
-const UserForm = ({ addUser }) => {
+const UserForm = ({ onFormSubmit, latestUserId }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addUser({ name, email, phone });
+    const newUser = {
+      id: latestUserId + 1, // Increment the latest user ID
+      name,
+      email,
+      phone,
+    };
+    onFormSubmit(newUser);
+
     setName('');
     setEmail('');
     setPhone('');
+    alert('New user Added');
   };
 
   return (
-    <>
-      <div className="container">
-        <form onSubmit={handleSubmit} className="login">
-          <div className="login__field">
+    <motion.section
+      id="user-form"
+      initial={{ y: -1000 }}
+      animate={{ y: 0 }}
+      transition={{
+        duration: '1',
+        delay: '1',
+      }}
+    >
+      <div className="head">
+        <h2>Add New User</h2>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="todo-list">
+          <label>
+            Name:
             <input
-              className="login__input"
               type="text"
               value={name}
-              placeholder="Enter Name"
               onChange={(e) => setName(e.target.value)}
               required
             />
-          </div>
-          <input
-            className="login__input"
-            type="email"
-            value={email}
-            placeholder="Enter Email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <input
-            className="login__input"
-            type="tel"
-            value={phone}
-            placeholder="Enter Phone number"
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
-
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Phone:
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </label>
           <button type="submit">Add User</button>
-        </form>
-      </div>
-    </>
+        </div>
+      </form>
+    </motion.section>
   );
 };
 

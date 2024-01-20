@@ -1,0 +1,44 @@
+#user-form {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 250px;
+  height: 50%;
+  background: var(--light);
+  z-index: 2000;
+  font-family: var(--lato);
+  transition: 0.3s ease;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  border-radius: 30px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.todo-list label {
+  font-size: 16px;
+}
+input {
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.todo-list > button {
+  margin: 10px 40px;
+  width: 120px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #5aa0e2;
+  color: #e7f1f8;
+  cursor: pointer;
+  font-size: 16px;
+}
+h2 {
+  text-align: center;
+}
+.todo-list {
+  padding: 10px;
+}
