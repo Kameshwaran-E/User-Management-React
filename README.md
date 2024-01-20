@@ -1,11 +1,10 @@
 # User-Management
 
-- React (v18), Router(v6) and Node (v20).
-- Dark-Mode and Rich Text Support
-- Functional components in TS.
-- Tailwind and scss for styling.
-- Responsive across three different breakpoints
-- Deployed on Github Pages.
+- React (v18) and Node (v20).
+- jsonplaceholder api for fetching data
+- Functional components .
+- Boxicons for icons.
+- Deployed on Netlify.
 
 ## Preview
 
