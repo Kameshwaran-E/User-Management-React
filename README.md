@@ -16,7 +16,7 @@
 ```bash
 git clone https://github.com/Kameshwaran-E/User-Management-React.git
 cd User-Management-React
-npm
+npm install
 npm start
 ```
 
